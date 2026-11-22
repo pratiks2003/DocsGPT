@@ -1,0 +1,9 @@
+key: mcp:fireflies
+name: Fireflies
+description: Search meeting transcripts and summaries, ask questions across calls, and find action items.
+mcp_url: https://api.fireflies.ai/mcp
+icon: fireflies
+category: knowledge
+auth_kind: mcp_oauth
+capabilities: [read]
+docs_url: https://docs.fireflies.ai/getting-started/mcp-configuration
