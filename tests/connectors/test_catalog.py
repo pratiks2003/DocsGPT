@@ -313,6 +313,18 @@ def test_calcom_preset_uses_remote_oauth_catalog_contract():
     assert calcom.docs_url == "https://cal.com/docs/mcp-server"
 
 
+def test_fireflies_preset_uses_remote_oauth_catalog_contract():
+    fireflies = catalog.get_definition("mcp:fireflies")
+
+    assert fireflies.name == "Fireflies"
+    assert fireflies.icon == "fireflies"
+    assert fireflies.category == "knowledge"
+    assert fireflies.mcp_url == "https://api.fireflies.ai/mcp"
+    assert fireflies.auth_kind == "mcp_oauth"
+    assert fireflies.capabilities == ("read",)
+    assert fireflies.docs_url == "https://docs.fireflies.ai/getting-started/mcp-configuration"
+
+
 def test_airtable_preset_uses_remote_oauth_catalog_contract():
     airtable = catalog.get_definition("mcp:airtable")
 
